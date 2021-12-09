@@ -44,6 +44,12 @@
 #accessibilityTutorial a:hover span{
     background-color: #fff;
 }
+#cookie-bar-button {
+    text-decoration: none !important;
+}
+#cookie-bar-button:hover {
+    text-decoration: underline !important;
+}
 ::selection{ /*cor de texto selecionado*/
     background-color: #333;
     color: #FF0;

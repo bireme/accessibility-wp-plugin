@@ -62,6 +62,14 @@ $lang = substr($locale, 0,2);
                         </label>
                     </td>
                 </tr>
+                <tr valign="top">
+                    <th scope="row"><?php _e('Cookie Bar', 'accessibility-wp-plugin'); ?>:</th>
+                    <td>
+                        <label for="cookie-bar">
+                            <input type="checkbox" name="accessibility_wp_plugin_config[cookie_bar]" value="true" id="cookie-bar" <?php echo (isset($config['cookie_bar']) ?  " checked='true'" : '') ;?> ></input>
+                        </label>
+                    </td>
+                </tr>
                 <tr>
                     <th scope="row">
                         <h2><?php _e('Custom Section', 'accessibility-wp-plugin'); ?></h2>

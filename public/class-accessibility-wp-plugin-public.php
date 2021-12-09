@@ -101,6 +101,10 @@ class Accessibility_WP_Plugin_Public {
 
 		wp_enqueue_script( 'cookie', plugin_dir_url( __FILE__ ) . 'js/cookie.js', array( 'jquery' ), $this->version, false );
 
+		if ( 'true' == $config['cookie_bar'] ) {
+			wp_enqueue_script( 'cookiebar', 'https://politicas.bireme.org/cookiebar/cookiebar-latest.js', array( 'jquery' ), $this->version, false );
+		}
+
 		if ( 'true' == $config['accessibility_bar'] ) {
 			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/accessibility-wp-plugin-public.js', array( 'jquery' ), $this->version, false );
 		}
