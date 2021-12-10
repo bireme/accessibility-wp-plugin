@@ -17,13 +17,16 @@
 
 <?php
     $config = get_option('accessibility_wp_plugin_config');
+
+    $bar_color = ( $config['accessibility_bar_color'] ) ? $config['accessibility_bar_color'] : '#778899';
+    $bar_text_color = ( $config['accessibility_bar_text_color'] ) ? $config['accessibility_bar_text_color'] : '#FFFFFF';
     
     $locale = get_bloginfo('language');
     $lang = substr($locale, 0,2);
 ?>
 
 <?php if ( 'true' == $config['footer_bar'] ) : ?>
-<section id="footer-bar">
+<section id="footer-bar" style="background: <?php echo stripslashes($bar_color); ?>; color: <?php echo stripslashes($bar_text_color); ?>;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

@@ -23,12 +23,15 @@
     $search_form  = ( $config['accessibility_search'] ) ? $config['accessibility_search'] : '#searchForm';
     $site_footer  = ( $config['accessibility_footer'] ) ? $config['accessibility_footer'] : '#footer';
 
+    $bar_color = ( $config['accessibility_bar_color'] ) ? $config['accessibility_bar_color'] : '#778899';
+    $bar_text_color = ( $config['accessibility_bar_text_color'] ) ? $config['accessibility_bar_text_color'] : '#FFFFFF';
+
     $locale = get_bloginfo('language');
     $lang = substr($locale, 0,2);
 ?>
 
 <?php if ( 'true' == $config['accessibility_bar'] ) : ?>
-<section id="barAccessibility">
+<section id="barAccessibility" style="background: <?php echo stripslashes($bar_color); ?>; color: <?php echo stripslashes($bar_text_color); ?>;">
     <div class="container">
         <div class="row">
             <div class="col-md-6" id="accessibilityTutorial">
@@ -38,10 +41,10 @@
                 <a href="<?php echo $site_footer; ?>" tabindex="4" role="button"><?php _e('Footer', 'accessibility-wp-plugin'); ?> <span class="hiddenMobile">4</span></a>
             </div>
             <div class="col-md-6" id="accessibilityFontes">
-                <a href="#!" id="fontPlus" tabindex="5" aria-hidden="true">+A</a>
-                <a href="#!" id="fontReset" tabindex="6" aria-hidden="true">A</a>
-                <a href="#!" id="fontMinus" tabindex="7" aria-hidden="true">-A</a>
-                <a href="#!" id="contraste" tabindex="8" aria-hidden="true"><i class="fas fa-adjust"></i> <?php _e('High contrast', 'accessibility-wp-plugin'); ?></a>
+                <a href="#!" id="fontPlus" tabindex="5" aria-hidden="true">+A</a> |
+                <a href="#!" id="fontReset" tabindex="6" aria-hidden="true">A</a> |
+                <a href="#!" id="fontMinus" tabindex="7" aria-hidden="true">-A</a> |
+                <a href="#!" id="contraste" tabindex="8" aria-hidden="true"><i class="fas fa-adjust"></i> <?php _e('High contrast', 'accessibility-wp-plugin'); ?></a> |
                 <a href="https://politicas.bireme.org/accesibilidad/<?php echo $lang; ?>" role="button" id="acessibility" tabindex="9" target="_blank" title="Acessibilidade"><i class="fas fa-wheelchair"></i></a>
             </div>
         </div>

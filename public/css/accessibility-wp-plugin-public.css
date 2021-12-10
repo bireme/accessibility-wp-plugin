@@ -5,15 +5,13 @@
 
 #barAccessibility,
 #footer-bar {
-    background: #4e7952; /*Cor da barra*/
-    color: #fff;
     padding: 6px 0;
     font-size: 12px;
     text-align: center;
 }
 #barAccessibility a,
 #footer-bar a {
-    color: #fff;
+    color: inherit;
     text-decoration: none;
 }
 #barAccessibility a:hover{
@@ -25,7 +23,6 @@
 #accessibilityFontes a{
     padding: 0 5px; 
     cursor: pointer;
-    border-right: 1px solid #ddd;
 }
 #accessibilityFontes a:nth-last-child(1){
     border-right: none;
@@ -57,27 +54,27 @@
 
 /********************** Contraste *****************/
 .bodyBlack{ /*body*/
-    background: #000;
-    color: #fff;
+    background: #000 !important;
+    color: #fff !important;
 }
 .bodyBlack ::selection{ /*texto selecionado*/
-    background-color: #FF0;
-    color: #000;
+    background-color: #FF0 !important;
+    color: #000 !important;
 }
 .bodyBlack .imgBlack{ /*inserir esta classe em imagens sem fundos com texto em preto*/
-    background: #fff;
+    background: #fff !important;
 }
 .bodyBlack a{ /*links*/
-    color: #ff0!important;
+    color: #ff0 !important;
 }
 .bodyBlack #nav, .bodyBlack #countHome, .bodyBlack #nav .dropdown-menu, .bodyBlack .dropdown-menu,
 .bodyBlack #footer, .bodyBlack .card-header, .bodyBlack .nav-link, .bodyBlack .pagination .disabled .page-link,
 .bodyBlack #barAcessibilidade{ /*menu, footer e barra de acessibiliadade*/
-    background: #666;
+    background: #666 !important;
 }
  .bodyBlack .titleMain, .bodyBlack .breadcrumb, .bodyBlack .nav-item .active,
  .bodyBlack #searchInside, .bodyBlack .card, .bodyBlack #language a{
-    background: #333;
+    background: #333 !important;
 }
 
 /********************** Formatação Formulário **********************/
@@ -97,14 +94,14 @@ ex: ".bodyBlack .noticias" para div noticia
 *********************/
 .bodyBlack #header, .bodyBlack .boxHome, .bodyBlack #searchInside, .bodyBlack .dropdown-menu a:hover,
 .bodyBlack .bgColor1, .bodyBlack #parceiros, .bodyBlack .table, .bodyBlack .page-item a{
-    background: #000;
-    color: #fff;
+    background: #000 !important;
+    color: #fff !important;
 }
 .bodyBlack .card button{
-    color: #fff;
+    color: #fff !important;
 }
 .bodyBlack .table tr:hover{
-    color: #999;
+    color: #999 !important;
 }
 
 /********************* Breakpoint *********************/

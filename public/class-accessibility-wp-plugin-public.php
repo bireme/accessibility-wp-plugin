@@ -115,6 +115,7 @@ class Accessibility_WP_Plugin_Public {
             'search_form'  => $config['accessibility_search'],
             'site_footer'  => $config['accessibility_footer'],
             'font_size'    => $config['accessibility_font_size'],
+            'contrast'     => $config['accessibility_contrast']
         ));
 
 	}

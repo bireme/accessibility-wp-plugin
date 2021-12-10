@@ -24,6 +24,9 @@ if ( !current_user_can('manage_options') ) {
 
 $config = get_option('accessibility_wp_plugin_config');
 
+$bar_color = ( $config['accessibility_bar_color'] ) ? $config['accessibility_bar_color'] : '#778899';
+$bar_text_color = ( $config['accessibility_bar_text_color'] ) ? $config['accessibility_bar_text_color'] : '#FFFFFF';
+
 $locale = get_bloginfo('language');
 $lang = substr($locale, 0,2);
 
@@ -114,6 +117,35 @@ $lang = substr($locale, 0,2);
                     <td>
                         <input type="text" id="accessibility-font-size" name="accessibility_wp_plugin_config[accessibility_font_size]" value="<?php echo $config['accessibility_font_size']; ?>" class="regular-text" style="width: 50em;">
                         <p class="description"><?php _e('Enter one or more elements', 'accessibility-wp-plugin'); ?> (<?php _e('comma separated', 'accessibility-wp-plugin'); ?>)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="accessibility-contrast"><?php _e('Contrast', 'accessibility-wp-plugin'); ?></label>
+                    </th>
+                    <td>
+                        <input type="text" id="accessibility-contrast" name="accessibility_wp_plugin_config[accessibility_contrast]" value="<?php echo $config['accessibility_contrast']; ?>" class="regular-text" style="width: 50em;">
+                        <p class="description"><?php _e('Enter one or more elements', 'accessibility-wp-plugin'); ?> (<?php _e('comma separated', 'accessibility-wp-plugin'); ?>)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="accessibility-bar-color"><?php _e('Bar Color', 'accessibility-wp-plugin'); ?></label>
+                    </th>
+                    <td>
+                        <input type="text" id="accessibility-bar-color" name="accessibility_wp_plugin_config[accessibility_bar_color]" value="<?php echo $config['accessibility_bar_color']; ?>" class="regular-text">
+                        <div class="bar-color" style="height: 30px; width: 30px; float: left; margin-right: 8px; background: <?php echo $bar_color; ?>;"></div>
+                        <p class="description"><?php _e('Example', 'accessibility-wp-plugin'); ?>: #778899</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="accessibility-bar-text-color"><?php _e('Bar Text Color', 'accessibility-wp-plugin'); ?></label>
+                    </th>
+                    <td>
+                        <input type="text" id="accessibility-bar-text-color" name="accessibility_wp_plugin_config[accessibility_bar_text_color]" value="<?php echo $config['accessibility_bar_text_color']; ?>" class="regular-text">
+                        <div class="bar-text-color" style="height: 30px; width: 30px; float: left; margin-right: 8px; background: <?php echo $bar_text_color; ?>; "></div>
+                        <p class="description"><?php _e('Example', 'accessibility-wp-plugin'); ?>: #FFFFFF</p>
                     </td>
                 </tr>
             </tbody>
