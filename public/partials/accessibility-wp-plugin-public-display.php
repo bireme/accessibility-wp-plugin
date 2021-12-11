@@ -18,20 +18,20 @@
 <?php
     $config = get_option('accessibility_wp_plugin_config');
 
-    $main_content = ( $config['accessibility_main_content'] ) ? $config['accessibility_main_content'] : '#primary';
-    $site_menu    = ( $config['accessibility_menu'] ) ? $config['accessibility_menu'] : '#site-navigation';
-    $search_form  = ( $config['accessibility_search'] ) ? $config['accessibility_search'] : '#searchForm';
-    $site_footer  = ( $config['accessibility_footer'] ) ? $config['accessibility_footer'] : '#footer';
+    $main_content = ( $config['accessibility_main_content'] ) ? sanitize_text_field($config['accessibility_main_content']) : '#primary';
+    $site_menu    = ( $config['accessibility_menu'] ) ? sanitize_text_field($config['accessibility_menu']) : '#site-navigation';
+    $search_form  = ( $config['accessibility_search'] ) ? sanitize_text_field($config['accessibility_search']) : '#searchForm';
+    $site_footer  = ( $config['accessibility_footer'] ) ? sanitize_text_field($config['accessibility_footer']) : '#footer';
 
-    $bar_color = ( $config['accessibility_bar_color'] ) ? $config['accessibility_bar_color'] : '#778899';
-    $bar_text_color = ( $config['accessibility_bar_text_color'] ) ? $config['accessibility_bar_text_color'] : '#FFFFFF';
+    $bar_color = ( $config['accessibility_bar_color'] ) ? sanitize_text_field($config['accessibility_bar_color']) : '#778899';
+    $bar_text_color = ( $config['accessibility_bar_text_color'] ) ? sanitize_text_field($config['accessibility_bar_text_color']) : '#FFFFFF';
 
     $locale = get_bloginfo('language');
     $lang = substr($locale, 0,2);
 ?>
 
 <?php if ( 'true' == $config['accessibility_bar'] ) : ?>
-<section id="barAccessibility" style="background: <?php echo stripslashes($bar_color); ?>; color: <?php echo stripslashes($bar_text_color); ?>;">
+<section id="barAccessibility" style="background: <?php echo $bar_color; ?>; color: <?php echo $bar_text_color; ?>;">
     <div class="container">
         <div class="row">
             <div class="col-md-6" id="accessibilityTutorial">

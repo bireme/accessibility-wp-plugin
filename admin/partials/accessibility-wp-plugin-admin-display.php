@@ -24,8 +24,8 @@ if ( !current_user_can('manage_options') ) {
 
 $config = get_option('accessibility_wp_plugin_config');
 
-$bar_color = ( $config['accessibility_bar_color'] ) ? $config['accessibility_bar_color'] : '#778899';
-$bar_text_color = ( $config['accessibility_bar_text_color'] ) ? $config['accessibility_bar_text_color'] : '#FFFFFF';
+$bar_color = ( $config['accessibility_bar_color'] ) ? sanitize_text_field($config['accessibility_bar_color']) : '#778899';
+$bar_text_color = ( $config['accessibility_bar_text_color'] ) ? sanitize_text_field($config['accessibility_bar_text_color']) : '#FFFFFF';
 
 $locale = get_bloginfo('language');
 $lang = substr($locale, 0,2);

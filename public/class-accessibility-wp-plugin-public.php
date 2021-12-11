@@ -110,12 +110,12 @@ class Accessibility_WP_Plugin_Public {
 		}
 
 		wp_localize_script($this->plugin_name, 'accessibility_script_vars', array(
-            'main_content' => $config['accessibility_main_content'],
-            'site_menu'    => $config['accessibility_menu'],
-            'search_form'  => $config['accessibility_search'],
-            'site_footer'  => $config['accessibility_footer'],
-            'font_size'    => $config['accessibility_font_size'],
-            'contrast'     => $config['accessibility_contrast']
+            'main_content' => sanitize_text_field($config['accessibility_main_content']),
+            'site_menu'    => sanitize_text_field($config['accessibility_menu']),
+            'search_form'  => sanitize_text_field($config['accessibility_search']),
+            'site_footer'  => sanitize_text_field($config['accessibility_footer']),
+            'font_size'    => sanitize_text_field($config['accessibility_font_size']),
+            'contrast'     => sanitize_text_field($config['accessibility_contrast'])
         ));
 
 	}

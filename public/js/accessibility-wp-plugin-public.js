@@ -143,8 +143,10 @@
 	$( document ).ready(function() {
 		$('#contraste').on( "click", function(){
 			if(_color == 'bodyBlack'){
+				_color = '';
 				Cookies.set('_color', '', { expires: 1 });
 			}else{
+				_color = 'bodyBlack';
 				Cookies.set('_color', 'bodyBlack', { expires: 1 });
 			}
 			$(contrast).toggleClass('bodyBlack');
