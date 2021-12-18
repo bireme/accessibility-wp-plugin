@@ -1,12 +1,11 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Accessibility WP Plugin\n"
-"POT-Creation-Date: 2021-12-17 22:42-0300\n"
-"PO-Revision-Date: 2020-02-06 09:59-0300\n"
+"POT-Creation-Date: 2021-12-17 22:43-0300\n"
+"PO-Revision-Date: 2021-12-17 22:43-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: en_US\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,99 +17,99 @@ msgstr ""
 
 #: admin/class-accessibility-wp-plugin-admin.php:104
 msgid "Accessibility WP Plugin settings"
-msgstr ""
+msgstr "Configuración - Accessibility WP Plugin"
 
 #: admin/class-accessibility-wp-plugin-admin.php:104
 msgid "Accessibility WP Plugin"
-msgstr ""
+msgstr "Accessibility WP Plugin"
 
 #: admin/class-accessibility-wp-plugin-admin.php:123
 msgid "Settings"
-msgstr ""
+msgstr "Configuración"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:37
 msgid "Accessibility WP Plugin Settings"
-msgstr ""
+msgstr "Configuración - Accessibility WP Plugin"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:49
 msgid "Active Bars"
-msgstr ""
+msgstr "Activar Barras"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:53
 msgid "Accessibility Bar"
-msgstr ""
+msgstr "Barra de Accesibilidad"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:61
 msgid "Footer Bar"
-msgstr ""
+msgstr "Barra de Pie de Página"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:69
 msgid "Cookie Bar"
-msgstr ""
+msgstr "Barra de Cookie"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:78
 msgid "Custom Section"
-msgstr ""
+msgstr "Sección Personalizada"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:83
 #: public/partials/accessibility-wp-plugin-public-display.php:38
 msgid "Main Content"
-msgstr ""
+msgstr "Contenido Principal"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:91
 #: public/partials/accessibility-wp-plugin-public-display.php:39
 msgid "Menu"
-msgstr ""
+msgstr "Menú"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:99
 #: public/partials/accessibility-wp-plugin-public-display.php:40
 msgid "Search"
-msgstr ""
+msgstr "Búsqueda"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:107
 #: public/partials/accessibility-wp-plugin-public-display.php:41
 msgid "Footer"
-msgstr ""
+msgstr "Pie de Página"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:115
 msgid "Font Size"
-msgstr ""
+msgstr "Tamaño de Fuente"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:119
 #: admin/partials/accessibility-wp-plugin-admin-display.php:128
 msgid "Enter one or more elements"
-msgstr ""
+msgstr "Introduzca uno o más elementos"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:119
 #: admin/partials/accessibility-wp-plugin-admin-display.php:128
 msgid "comma separated"
-msgstr ""
+msgstr "separado por comas"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:124
 msgid "Contrast"
-msgstr ""
+msgstr "Contraste"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:133
 msgid "Bar Color"
-msgstr ""
+msgstr "Color de Barra"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:138
 #: admin/partials/accessibility-wp-plugin-admin-display.php:148
 msgid "Example"
-msgstr ""
+msgstr "Ejemplo"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:143
 msgid "Bar Text Color"
-msgstr ""
+msgstr "Color del Texto de la Barra"
 
 #: public/partials/accessibility-wp-plugin-public-display.php:47
 msgid "High Contrast"
-msgstr ""
+msgstr "Alto Contraste"
 
 #: public/partials/footer-bar-public-display.php:33
 msgid "Terms and Conditions of Use"
-msgstr ""
+msgstr "Términos y Condiciones de Uso"
 
 #: public/partials/footer-bar-public-display.php:33
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Políticas de Privacidad"

@@ -44,7 +44,7 @@
                 <a href="#!" id="fontPlus" tabindex="5" aria-hidden="true">+A</a> |
                 <a href="#!" id="fontReset" tabindex="6" aria-hidden="true">A</a> |
                 <a href="#!" id="fontMinus" tabindex="7" aria-hidden="true">-A</a> |
-                <a href="#!" id="contraste" tabindex="8" aria-hidden="true"><i class="fas fa-adjust"></i> <?php _e('High contrast', 'accessibility-wp-plugin'); ?></a> |
+                <a href="#!" id="contraste" tabindex="8" aria-hidden="true"><i class="fas fa-adjust"></i> <?php _e('High Contrast', 'accessibility-wp-plugin'); ?></a> |
                 <a href="https://politicas.bireme.org/accesibilidad/<?php echo $lang; ?>" role="button" id="acessibility" tabindex="9" target="_blank" title="Acessibilidade"><i class="fas fa-wheelchair"></i></a>
             </div>
         </div>
