@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Accessibility WP Plugin\n"
 "POT-Creation-Date: 2021-12-17 22:43-0300\n"
-"PO-Revision-Date: 2021-12-17 22:43-0300\n"
+"PO-Revision-Date: 2021-12-22 13:42-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -83,7 +83,7 @@ msgstr "Introduzca uno o más elementos"
 #: admin/partials/accessibility-wp-plugin-admin-display.php:119
 #: admin/partials/accessibility-wp-plugin-admin-display.php:128
 msgid "comma separated"
-msgstr "separado por comas"
+msgstr "separados por coma"
 
 #: admin/partials/accessibility-wp-plugin-admin-display.php:124
 msgid "Contrast"
