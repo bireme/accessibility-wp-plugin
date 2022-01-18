@@ -54,7 +54,7 @@
       $("#fontReset").click(function() {
         $.each(resetFont, function( index, obj ){
             $(obj.selector).css('font-size', obj.fontsize);
-	    });
+        });
       });
 
       //increases font size when "+" is clicked
