@@ -40,21 +40,12 @@
         resize = resize.concat(res);
       }
 
-      var resetFont = [];
-      $.each(resize, function( index, value ){
-          var element = {};
-          element.selector = value;
-          element.fontsize = $(value).css('font-size');
-          resetFont.push(element);
-      });
-
       resize = resize.join(', ');
 
       //resets the font size when "reset" is clicked
+      var resetFont = $(resize).css('font-size');
       $("#fontReset").click(function() {
-        $.each(resetFont, function( index, obj ){
-            $(obj.selector).css('font-size', obj.fontsize);
-        });
+        $(resize).css('font-size', resetFont);
       });
 
       //increases font size when "+" is clicked
