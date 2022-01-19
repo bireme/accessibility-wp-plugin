@@ -30,50 +30,23 @@
      */
 
     $(document).ready(function() {
-      var resize = new Array('.resizable', 'p', '#footer', '.site-info', '.entry-title', '.widget-title', '.widget-title li', '.entry-content li', '#site-navigation a', '.searchItens', '.vhl-themes', '.vhl-themes > strong', '.eventos ul a', '.noticias a', '#nav', '.navFooter li a', '.breadcrumb', '.accordion', '.accordion button');
+      var resizable_elements = new Array('.resizable', 'a', 'p', 'span', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6');
 
       if ( accessibility_script_vars.font_size ) {
         var res = [];
         $.each(accessibility_script_vars.font_size.split(','), function(){
             res.push($.trim(this));
         });
-        resize = resize.concat(res);
+        resizable_elements = resizable_elements.concat(res);
       }
 
-      resize = resize.join(', ');
+      resizable_elements = resizable_elements.join(', ');
 
-      //resets the font size when "reset" is clicked
-      var resetFont = $(resize).css('font-size');
-      $("#fontReset").click(function() {
-        $(resize).css('font-size', resetFont);
+      jQuery(resizable_elements).each(function(){
+        jQuery(this).attr('data-fontsize',parseInt(jQuery(this).css('font-size')));
       });
 
-      //increases font size when "+" is clicked
-      $("#fontPlus").click(function() {
-        var originalFontSize = $(resize).css('font-size');
-        var originalFontNumber = parseFloat(originalFontSize, 10);
-        var newFontSize = originalFontNumber * 1.2;
-
-        if ( newFontSize < 30 ) {
-            $(resize).css('font-size', newFontSize);
-        }
-
-        return false;
-      });
-
-      //decrease font size when "-" is clicked
-      $("#fontMinus").click(function() {
-        var originalFontSize = $(resize).css('font-size');
-        var originalFontNumber = parseFloat(originalFontSize, 10);
-        var newFontSize = originalFontNumber * 0.8;
-
-        if ( newFontSize > 10 ) {
-            $(resize).css('font-size', newFontSize);
-        }
-
-        return false;
-      });
-
+      font_resizer();
     });
 
     // Navegação por atalhos
@@ -120,7 +93,9 @@
 
     // cache contraste
     var _color = Cookies.get('_color');
-    var contrast = new Array('.contrast' ,'body', '.entry-title', '.entry-content', '#masthead', '.site-content-contain', '.navigation-top', '.navigation-top .sub-menu');
+    var contrast = new Array('.contrast' ,'body');
+    // var contrast = new Array('.contrast' ,'body', '.entry-title', '.entry-content', '#masthead', '.site-title', '.site-description', '.site-content-contain', '.navigation-top', '.navigation-top .sub-menu');
+
     if ( accessibility_script_vars.contrast ) {
         var res = [];
         $.each(accessibility_script_vars.contrast.split(','), function(){
@@ -131,26 +106,94 @@
     contrast = contrast.join(', ');
 
     // ao abrir a página
+    var contrast_class = 'bodyBlack';
+    // var contrast_class = 'bodyHighContrast';
+    // var contrast_class = 'bodyNegativeContrast';
     $( document ).ready(function() {
         if(_color == '' || typeof _color === "undefined"){
-            $(contrast).removeClass('bodyBlack');
+            $(contrast).removeClass(contrast_class);
         }else{
-            $(contrast).addClass('bodyBlack');
+            $(contrast).addClass(contrast_class);
         }
     });
 
     // ao clicar Contraste
     $( document ).ready(function() {
         $('#contraste').on( "click", function(){
-            if(_color == 'bodyBlack'){
+            if(_color == contrast_class){
                 _color = '';
                 Cookies.set('_color', '', { expires: 1 });
             }else{
-                _color = 'bodyBlack';
-                Cookies.set('_color', 'bodyBlack', { expires: 1 });
+                _color = contrast_class;
+                Cookies.set('_color', contrast_class, { expires: 1 });
             }
-            $(contrast).toggleClass('bodyBlack');
+            $(contrast).toggleClass(contrast_class);
         });
     });
 
 })( jQuery );
+
+function font_resizer(){
+
+    var resizable_elements = new Array('.resizable', 'a', 'p', 'span', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+
+    if ( accessibility_script_vars.font_size ) {
+        var res = [];
+        jQuery.each(accessibility_script_vars.font_size.split(','), function(){
+            res.push(jQuery.trim(this));
+        });
+        resizable_elements = resizable_elements.concat(res);
+    }
+
+    resizable_elements = resizable_elements.join(', ');
+
+    //Font++
+    jQuery("#fontPlus").click(function(e){
+
+        e.preventDefault();
+
+        jQuery(resizable_elements).each(function(){
+
+            var el_font_size = parseInt(jQuery(this).css('font-size'));
+
+            jQuery(this).css('font-size',parseInt(el_font_size+1)+'px');
+
+        });
+
+    });
+
+    //Font--
+    jQuery("#fontMinus").click(function(e){
+
+        e.preventDefault();
+
+        jQuery(resizable_elements).each(function(){
+
+            var el_font_size = parseInt(jQuery(this).css('font-size'));
+
+            if(el_font_size > 12){
+
+                jQuery(this).css('font-size',parseInt(el_font_size-1)+'px');
+
+            }
+
+        });
+
+    });
+
+    //Font Reset
+    jQuery("#fontReset").click(function(e){
+
+        e.preventDefault();
+
+        jQuery(resizable_elements).each(function(){
+
+            var el_font_size = parseInt(jQuery(this).css('font-size'));
+
+            jQuery(this).css('font-size',parseInt(jQuery(this).data("fontsize"))+'px');
+
+        });
+
+    });
+
+}
