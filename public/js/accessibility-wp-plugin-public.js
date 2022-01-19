@@ -30,7 +30,7 @@
      */
 
     $(document).ready(function() {
-      var resizable_elements = new Array('.resizable', 'a', 'p', 'span', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6');
+      var resizable_elements = new Array('.resizable', 'a', 'p', 'span', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', '.site-info', '.entry-title', '.widget-title', 'ul li', 'ol li');
 
       if ( accessibility_script_vars.font_size ) {
         var res = [];
@@ -94,7 +94,6 @@
     // cache contraste
     var _color = Cookies.get('_color');
     var contrast = new Array('.contrast' ,'body');
-    // var contrast = new Array('.contrast' ,'body', '.entry-title', '.entry-content', '#masthead', '.site-title', '.site-description', '.site-content-contain', '.navigation-top', '.navigation-top .sub-menu');
 
     if ( accessibility_script_vars.contrast ) {
         var res = [];
@@ -106,9 +105,9 @@
     contrast = contrast.join(', ');
 
     // ao abrir a página
-    var contrast_class = 'bodyBlack';
-    // var contrast_class = 'bodyHighContrast';
+    // var contrast_class = 'bodyBlack';
     // var contrast_class = 'bodyNegativeContrast';
+    var contrast_class = 'bodyHighContrast';
     $( document ).ready(function() {
         if(_color == '' || typeof _color === "undefined"){
             $(contrast).removeClass(contrast_class);
