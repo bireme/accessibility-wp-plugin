@@ -133,9 +133,10 @@ $lang = substr($locale, 0,2);
                         <label for="accessibility-bar-color"><?php _e('Bar Color', 'accessibility-wp-plugin'); ?></label>
                     </th>
                     <td>
-                        <input type="text" id="accessibility-bar-color" name="accessibility_wp_plugin_config[accessibility_bar_color]" value="<?php echo $config['accessibility_bar_color']; ?>" class="regular-text input-bar-color" data-color="#778899">
-                        <div class="bar-color" style="height: 30px; width: 30px; float: left; margin-right: 8px; background: <?php echo $bar_color; ?>;"></div>
-                        <p class="description"><?php _e('Example', 'accessibility-wp-plugin'); ?>: #778899</p>
+                        <input type="color" id="accessibility-bar-color" name="accessibility_wp_plugin_config[accessibility_bar_color]" value="<?php echo ( $config['accessibility_bar_color'] ) ? $config['accessibility_bar_color'] : '#778899'; ?>" class="regular-text input-bar-color" data-color="#778899" style="width: 235px;">
+                        <p class="description hex-color" style="display: inline; text-transform: uppercase;"><?php echo ( $config['accessibility_bar_color'] ) ? $config['accessibility_bar_color'] : '#778899'; ?></p>
+                        <!-- <div class="bar-color" style="height: 30px; width: 30px; float: left; margin-right: 8px; background: <?php echo $bar_color; ?>;"></div> -->
+                        <!-- <p class="description"><?php _e('Example', 'accessibility-wp-plugin'); ?>: #778899</p> -->
                     </td>
                 </tr>
                 <tr>
@@ -143,9 +144,10 @@ $lang = substr($locale, 0,2);
                         <label for="accessibility-bar-text-color"><?php _e('Bar Text Color', 'accessibility-wp-plugin'); ?></label>
                     </th>
                     <td>
-                        <input type="text" id="accessibility-bar-text-color" name="accessibility_wp_plugin_config[accessibility_bar_text_color]" value="<?php echo $config['accessibility_bar_text_color']; ?>" class="regular-text input-bar-color" data-color="#FFFFFF">
-                        <div class="bar-text-color" style="height: 30px; width: 30px; float: left; margin-right: 8px; background: <?php echo $bar_text_color; ?>; "></div>
-                        <p class="description"><?php _e('Example', 'accessibility-wp-plugin'); ?>: #FFFFFF</p>
+                        <input type="color" id="accessibility-bar-text-color" name="accessibility_wp_plugin_config[accessibility_bar_text_color]" value="<?php echo ( $config['accessibility_bar_text_color'] ) ? $config['accessibility_bar_text_color'] : '#FFFFFF'; ?>" class="regular-text input-bar-color" data-color="#FFFFFF" style="width: 235px;">
+                        <p class="description hex-color" style="display: inline; text-transform: uppercase;"><?php echo ( $config['accessibility_bar_text_color'] ) ? $config['accessibility_bar_text_color'] : '#FFFFFF'; ?></p>
+                        <!-- <div class="bar-text-color" style="height: 30px; width: 30px; float: left; margin-right: 8px; background: <?php echo $bar_text_color; ?>; "></div> -->
+                        <!-- <p class="description"><?php _e('Example', 'accessibility-wp-plugin'); ?>: #FFFFFF</p> -->
                     </td>
                 </tr>
             </tbody>
@@ -160,14 +162,25 @@ $lang = substr($locale, 0,2);
 <script type="text/javascript">
     var $ = jQuery;
     $( function() {
+        $('.input-bar-color').on( "change", function(){
+            var bgcolor = $(this).val();
+            if ( bgcolor ) {
+                $(this).next().text(bgcolor);
+            } else {
+                bgcolor = $(this).data('color');
+                $(this).next().text(bgcolor);
+            }
+        });
+/*
         $('.input-bar-color').on( "blur", function(){
             var bgcolor = $(this).val();
             if ( bgcolor ) {
                 $(this).next().css('background-color', bgcolor);
             } else {
                 bgcolor = $(this).data('color');
-                $(this).next().css('background-color', bgcolor);                
+                $(this).next().css('background-color', bgcolor);
             }
         });
+*/
     });
 </script>
