@@ -81,3 +81,5 @@ function run_accessibility_wp_plugin() {
 
 }
 run_accessibility_wp_plugin();
+
+
