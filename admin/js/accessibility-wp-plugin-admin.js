@@ -1,3 +1,7 @@
+/**
+ * Admin JavaScript for Accessibility WP Plugin.
+ */
+
 (function( $ ) {
 	'use strict';
 

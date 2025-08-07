@@ -1,1 +1,1 @@
-# accessibility-wp-plugin
+# accessibility-wp-plugin.

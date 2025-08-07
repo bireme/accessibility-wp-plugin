@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Define the internationalization functionality
  *
@@ -24,8 +23,7 @@
  * @subpackage Accessibility_WP_Plugin/includes
  * @author     BIREME/OPAS/OMS <mourawil@paho.org>
  */
-class Accessibility_WP_Plugin_i18n {
-
+class Accessibility_WP_Plugin_I18n {
 
 	/**
 	 * Load the plugin text domain for translation.
@@ -33,15 +31,11 @@ class Accessibility_WP_Plugin_i18n {
 	 * @since    1.0.0
 	 */
 	public function load_plugin_textdomain() {
-
 		load_plugin_textdomain(
 			'accessibility-wp-plugin',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
-
 	}
-
-
 
 }
