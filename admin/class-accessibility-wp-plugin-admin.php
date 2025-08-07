@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The admin-specific functionality of the plugin.
  *
@@ -20,7 +19,8 @@
  * @subpackage Accessibility_WP_Plugin/admin
  * @author     BIREME/OPAS/OMS <mourawil@paho.org>
  */
-class Accessibility_WP_Plugin_Admin {
+class Accessibility_WP_Plugin_Admin
+{
 
 	/**
 	 * The ID of this plugin.
@@ -47,7 +47,8 @@ class Accessibility_WP_Plugin_Admin {
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct( $plugin_name, $version )
+	{
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
@@ -59,7 +60,8 @@ class Accessibility_WP_Plugin_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_styles() {
+	public function enqueue_styles()
+	{
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -82,7 +84,8 @@ class Accessibility_WP_Plugin_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_scripts() {
+	public function enqueue_scripts()
+	{
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -100,18 +103,26 @@ class Accessibility_WP_Plugin_Admin {
 
 	}
 
-	public function admin_menu() {
-        add_options_page(__('Accessibility WP Plugin settings', 'accessibility-wp-plugin'), __('Accessibility WP Plugin', 'accessibility-wp-plugin'),
-            'manage_options', 'accessibility-wp-plugin-settings', array(&$this, 'accessibility_wp_plugin_page_admin'));
-        //call register settings function
-        add_action('admin_init', array(&$this, 'register_settings'));
-    }
+	public function admin_menu()
+	{
+		add_options_page(
+			__('Accessibility WP Plugin settings', 'accessibility-wp-plugin'),
+			__('Accessibility WP Plugin', 'accessibility-wp-plugin'),
+			'manage_options',
+			'accessibility-wp-plugin-settings',
+			array( &$this, 'accessibility_wp_plugin_page_admin' )
+		);
+		// Call register settings function
+		add_action('admin_init', array( &$this, 'register_settings' ));
+	}
 
-    public function register_settings(){
-        register_setting('accessibility-wp-plugin-settings-group', 'accessibility_wp_plugin_config');
-    }
+	public function register_settings()
+	{
+		register_setting('accessibility-wp-plugin-settings-group', 'accessibility_wp_plugin_config');
+	}
 
-    public function accessibility_wp_plugin_settings_link( $links ) {
+	public function accessibility_wp_plugin_settings_link( $links )
+	{
 		// Build and escape the URL.
 		$url = esc_url( add_query_arg(
 			'page',
@@ -136,7 +147,8 @@ class Accessibility_WP_Plugin_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function accessibility_wp_plugin_page_admin() {
+	public function accessibility_wp_plugin_page_admin()
+	{
 
 		include_once 'partials/accessibility-wp-plugin-admin-display.php';
 

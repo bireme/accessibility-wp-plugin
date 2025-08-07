@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Provide a admin area view for the plugin
  *
@@ -11,13 +10,14 @@
  * @package    Accessibility_WP_Plugin
  * @subpackage Accessibility_WP_Plugin/admin/partials
  */
+
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 
 <?php
 
-// check user capabilities
+// check user capabilities.
 if ( !current_user_can('manage_options') ) {
     return;
 }

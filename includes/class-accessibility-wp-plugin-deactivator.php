@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Fired during plugin deactivation
  *
@@ -30,7 +29,7 @@ class Accessibility_WP_Plugin_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-
+		// Código de desativação (se necessário).
 	}
 
 }

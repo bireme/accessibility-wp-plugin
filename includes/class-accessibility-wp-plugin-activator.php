@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Fired during plugin activation
  *
@@ -30,7 +29,7 @@ class Accessibility_WP_Plugin_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
-
+		// Código de ativação (se necessário).
 	}
 
 }

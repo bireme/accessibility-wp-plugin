@@ -1,7 +1,6 @@
 <?php
-
 /**
- * The plugin bootstrap file
+ * The plugin bootstrap file.
  *
  * This file is read by WordPress to generate the plugin information in the plugin
  * admin area. This file also includes all of the dependencies used by the plugin,
@@ -32,7 +31,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 /**
  * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
+ * Start at version 1.0.0 and use SemVer - https://semver.org.
  * Rename this for your plugin and update it as you release new versions.
  */
 define( 'ACCESSIBILITY_WP_PLUGIN_VERSION', '1.0.0' );
@@ -41,7 +40,7 @@ define( 'ACCESSIBILITY_WP_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-accessibility-wp-plugin-activator.php
+ * This action is documented in includes/class-accessibility-wp-plugin-activator.php.
  */
 function activate_accessibility_wp_plugin() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-accessibility-wp-plugin-activator.php';
@@ -50,7 +49,7 @@ function activate_accessibility_wp_plugin() {
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-accessibility-wp-plugin-deactivator.php
+ * This action is documented in includes/class-accessibility-wp-plugin-deactivator.php.
  */
 function deactivate_accessibility_wp_plugin() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-accessibility-wp-plugin-deactivator.php';

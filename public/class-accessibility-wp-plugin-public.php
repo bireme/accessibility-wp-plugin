@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The public-facing functionality of the plugin.
  *
@@ -97,7 +96,7 @@ class Accessibility_WP_Plugin_Public {
 		 * class.
 		 */
 
-	    $config = get_option('accessibility_wp_plugin_config');
+		$config = get_option('accessibility_wp_plugin_config');
 
 		wp_enqueue_script( 'cookie', plugin_dir_url( __FILE__ ) . 'js/cookie.js', array( 'jquery' ), $this->version, false );
 
@@ -110,13 +109,13 @@ class Accessibility_WP_Plugin_Public {
 		}
 
 		wp_localize_script($this->plugin_name, 'accessibility_script_vars', array(
-            'main_content' => sanitize_text_field($config['accessibility_main_content']),
-            'site_menu'    => sanitize_text_field($config['accessibility_menu']),
-            'search_form'  => sanitize_text_field($config['accessibility_search']),
-            'site_footer'  => sanitize_text_field($config['accessibility_footer']),
-            'font_size'    => sanitize_text_field($config['accessibility_font_size']),
-            'contrast'     => sanitize_text_field($config['accessibility_contrast'])
-        ));
+			'main_content' => sanitize_text_field($config['accessibility_main_content']),
+			'site_menu'    => sanitize_text_field($config['accessibility_menu']),
+			'search_form'  => sanitize_text_field($config['accessibility_search']),
+			'site_footer'  => sanitize_text_field($config['accessibility_footer']),
+			'font_size'    => sanitize_text_field($config['accessibility_font_size']),
+			'contrast'     => sanitize_text_field($config['accessibility_contrast'])
+		));
 
 	}
 
@@ -126,7 +125,7 @@ class Accessibility_WP_Plugin_Public {
 	 * @since    1.0.0
 	 */
 	public function acessibility_bar_render() {
-	    include_once 'partials/accessibility-wp-plugin-public-display.php';
+		include_once 'partials/accessibility-wp-plugin-public-display.php';
 	}
 
 	/**
@@ -135,7 +134,7 @@ class Accessibility_WP_Plugin_Public {
 	 * @since    1.0.0
 	 */
 	public function footer_bar_render() {
-	    include_once 'partials/footer-bar-public-display.php';
+		include_once 'partials/footer-bar-public-display.php';
 	}
 
 }
