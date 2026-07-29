@@ -1,0 +1,116 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Accessibility WP Plugin\n"
+"POT-Creation-Date: 2021-12-17 22:42-0300\n"
+"PO-Revision-Date: 2026-07-29 09:45-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/class-accessibility-wp-plugin-admin.php:104
+msgid "Accessibility WP Plugin settings"
+msgstr ""
+
+#: admin/class-accessibility-wp-plugin-admin.php:104
+msgid "Accessibility WP Plugin"
+msgstr ""
+
+#: admin/class-accessibility-wp-plugin-admin.php:123
+msgid "Settings"
+msgstr "Paramètres"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:37
+msgid "Accessibility WP Plugin Settings"
+msgstr ""
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:49
+msgid "Active Bars"
+msgstr "Barres actives"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:53
+msgid "Accessibility Bar"
+msgstr "Barre d’accessibilité"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:61
+msgid "Footer Bar"
+msgstr "Barre de pied de page"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:69
+msgid "Cookie Bar"
+msgstr "Barre de cookies"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:78
+msgid "Custom Section"
+msgstr "Section personnalisée"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:83
+#: public/partials/accessibility-wp-plugin-public-display.php:38
+msgid "Main Content"
+msgstr "Contenu principal"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:91
+#: public/partials/accessibility-wp-plugin-public-display.php:39
+msgid "Menu"
+msgstr "Menu"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:99
+#: public/partials/accessibility-wp-plugin-public-display.php:40
+msgid "Search"
+msgstr "Recherche"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:107
+#: public/partials/accessibility-wp-plugin-public-display.php:41
+msgid "Footer"
+msgstr "Pied de page"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:115
+msgid "Font Size"
+msgstr "taille de la police"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:119
+#: admin/partials/accessibility-wp-plugin-admin-display.php:128
+msgid "Enter one or more elements"
+msgstr "Saisissez un ou plusieurs éléments"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:119
+#: admin/partials/accessibility-wp-plugin-admin-display.php:128
+msgid "comma separated"
+msgstr "séparés par des virgules"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:124
+msgid "Contrast"
+msgstr "Contraste"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:133
+msgid "Bar Color"
+msgstr "Couleur de la barre"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:138
+#: admin/partials/accessibility-wp-plugin-admin-display.php:148
+msgid "Example"
+msgstr "Exemple"
+
+#: admin/partials/accessibility-wp-plugin-admin-display.php:143
+msgid "Bar Text Color"
+msgstr "Couleur du texte de la barre"
+
+#: public/partials/accessibility-wp-plugin-public-display.php:47
+msgid "High Contrast"
+msgstr "Contraste élevé"
+
+#: public/partials/footer-bar-public-display.php:33
+msgid "Terms and Conditions of Use"
+msgstr "Conditions générales d’utilisation"
+
+#: public/partials/footer-bar-public-display.php:33
+msgid "Privacy Policy"
+msgstr "Politique de confidentialité"
