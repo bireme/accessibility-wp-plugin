@@ -23,6 +23,12 @@
     
     $locale = get_bloginfo('language');
     $lang = substr($locale, 0,2);
+
+    // Se o idioma não for português, espanhol ou inglês,
+    // usa inglês como padrão.
+    if (!in_array($lang, array('pt', 'es', 'en'))) {
+        $lang = 'en';
+    }
 ?>
 
 <?php if ( 'true' == $config['footer_bar'] ) : ?>
@@ -30,11 +36,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <?php if($lang == 'pt' or $lang == 'es'){ ?>
                 <a href="https://politicas.bireme.org/terminos/<?php echo $lang; ?>" target="_blank" role="button"><?php _e('Terms and Conditions of Use', 'accessibility-wp-plugin'); ?></a> | <a href="https://politicas.bireme.org/privacidad/<?php echo $lang; ?>" target="_blank" role="button"><?php _e('Privacy Policy', 'accessibility-wp-plugin'); ?></a>
-                <?php }else{ ?>
-                <a href="https://politicas.bireme.org/terminos/en" target="_blank" role="button"><?php _e('Terms and Conditions of Use', 'accessibility-wp-plugin'); ?></a> | <a href="https://politicas.bireme.org/privacidad/<?php echo $lang; ?>" target="_blank" role="button"><?php _e('Privacy Policy', 'accessibility-wp-plugin'); ?></a>
-                <?php } ?>
             </div>
         </div>
     </div>
