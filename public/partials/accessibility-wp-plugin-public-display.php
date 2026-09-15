@@ -28,6 +28,12 @@
 
     $locale = get_bloginfo('language');
     $lang = substr($locale, 0,2);
+
+    // Se o idioma não for português, espanhol ou inglês,
+    // usa inglês como padrão.
+    if (!in_array($lang, array('pt', 'es', 'en'))) {
+        $lang = 'en';
+    }
 ?>
 
 <?php if ( 'true' == $config['accessibility_bar'] ) : ?>
